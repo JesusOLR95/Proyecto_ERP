@@ -1,0 +1,68 @@
+<div class="text-center">
+    <h1>Alta de panes</h1>
+</div>
+<div class="text-center">
+    <input class="btn btn-outline-primary mr-2" value="Guardar" (click)="altaPan()">
+    <input class="btn btn-outline-warning mr-2" value="Editar" (click)="editarPan()">
+
+</div>
+<form>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Nombre del pan</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="pan.nombre">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Precio del pan</label>
+            <input type="number" class="form-control" name="precio" [(ngModel)]="pan.precio">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group">
+            <label for="exampleFormControlSelect1">Tipo de Pan</label>
+            <select class="form-control" name="tipo" [(ngModel)]="pan.tipo">
+            <option>Grasa</option>
+            <option>Huevo</option>
+            <option>Reposteria</option>
+          </select>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Cantidad</label>
+            <input type="text" class="form-control" name="cantidad" [(ngModel)]="pan.cantidad">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Descripcion</label>
+        <textarea class="form-control" rows="3" name="descripcion" [(ngModel)]="pan.descripcion"></textarea>
+    </div>
+</form>
+<br>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Tipo</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Cantidad</th>
+            <th scope="col">Descripcion</th>
+            <th scope="col">Herramientas</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let pan of panes">
+        <td text-center> {{pan.idPan | titlecase }} </td>
+        <td text-center> {{pan.nombre | titlecase }} </td>
+        <td text-center> {{pan.tipo | titlecase }} </td>
+        <td text-center> {{pan.precio | titlecase }} </td>
+        <td text-center> {{pan.cantidad | titlecase }} </td>
+        <td text-center> {{pan.descripcion }} </td>
+        <td><button class="btn btn-primary mr-2" (click)="seleccionarPan(pan.idPan)">Seleccionar</button>
+            <button class="btn btn-danger" (click)="bajaPan(pan.idPan)">Borrar</button>
+        </td>
+
+
+
+
+    </tr>
+
+</table>

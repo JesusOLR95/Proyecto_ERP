@@ -1,0 +1,451 @@
+<ngb-tabset>
+    <ngb-tab title="Produccion">
+        <ng-template ngbTabContent>
+            <br>
+            <div class="container justify-content-center" style="font-family: fantasy; color: saddlebrown; text-align: center;font-size: 48px">PRODUCCION</div>
+
+            <div class="container d-flex justify-content-center mt-5">
+                <form action="" method="POST">
+                    <div class="container mt-1 d-flex justify-content-center">
+                        <!----------------------------botones de edición------->
+                        <!-- <button type="submit" value="Enviar" class="btn btn-success col-1" href=""><i
+                class="fas fa-file-upload"></i>
+            </button>
+
+            <button id="editar" class="btn btn-warning col-1"><i class="fas fa-edit"></i></button>
+
+
+            <button id="limpiar" class="btn btn-danger col-1"> <i class="fas fa-trash-alt"></i></button> -->
+
+                        <button type="submit" class="btn btn-outline-primary">Enviar</button>
+                        <button type="button" class="btn btn-outline-success">Editar</button>
+                        <button type="reset" class="btn btn-outline-danger">Limpiar</button>
+                    </div>
+                    <!------------------------formulario---------------------->
+
+                    <div class="form-row align-items-center">
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="nombre">Clave del Producto<input type="number" name="clave" class="form-control"
+                  id="formGroupExampleInput" placeholder="Clave única producto" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="nombre">Nombre del pan<input type="text" name="nombre" class="form-control"
+                  id="formGroupExampleInput" placeholder="Nombre" required></label>
+                        </div>
+
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Producción estandar<input type="number" name="produccion" class="form-control"
+                  id="formGroupExampleInput2" placeholder="No. de piezas" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Precio por pieza <input type="number" name="precio" class="form-control"
+                  id="formGroupExampleInput2" placeholder="Precio de elaboracion" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Precio al público <input type="number" name="precio1" class="form-control"
+                  id="formGroupExampleInput2" placeholder="Precio público" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Coste total<input type="number" name="costo" class="form-control"
+                  id="formGroupExampleInput2" placeholder="Costo total" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Coste unitario<input type="number" name="costo1" class="form-control"
+                  id="formGroupExampleInput2" placeholder="Costo unitario" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Precio al mayoreo<input type="number" name="costo2" class="form-control"
+                  id="formGroupExampleInput2" placeholder="Costo unitario" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Lote<input type="number" name="lote" class="form-control" id="formGroupExampleInput2"
+                  placeholder="Lote" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Ganancias<input type="number" name="ganancia" class="form-control"
+                  id="formGroupExampleInput2" placeholder="venta-costo" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Tiempo de elaboración<input type="time" name="tiempo" class="form-control"
+                  id="formGroupExampleInput2" placeholder="Tiempo Min" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Fecha de entrada<input type="date" name="fecha" class="form-control"
+                  id="formGroupExampleInput2" placeholder="" required></label>
+                        </div>
+
+                        <div class="form-group mx-sm-3 mb-2">
+                            <label for="app">Fecha de salida<input type="date" name="fecha" class="form-control"
+                  id="formGroupExampleInput2" placeholder="" required></label>
+                        </div>
+
+
+                        <div class="form-row align-items-center">
+                            <div class="form-group mx-sm-3 mb-2">
+                                <label for="turno">Tipo de pan <select id="inputState" name="tipo" class="form-control" required>
+                    <option value="huevo">Huevo</option>
+                    <option value="reposteria">Reposteria</option>
+                    <option value="grasa">Grasa</option>
+                  </select></label>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </ng-template>
+    </ngb-tab>
+
+
+
+    <ngb-tab title="Recetario">
+        <ng-template ngbTabContent>
+            <br>
+            <div class="view" style="background-image: url('../../../assets/./img/reynera2.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;position:relative;background-attachment: fixed;">
+                <div class="container justify-content-center" style="font-family: fantasy; color: saddlebrown; text-align: center;font-size: 48px">RECETARIO</div>
+
+                <!------------------------Recetario------------------------->
+                <div class="container mt-5">
+                    <div id="accordion">
+
+                        <!-------------------concha------------------------------>
+                        <div></div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <img src="../../../assets/./img/conchas.jpeg" alt="img" style="width: 200px; height: 200px">
+                  </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ingredientes</h5>
+                                    <p class="card-text">1.-10 gramos de levadura. <br> 2.- 1/2 taza de agua fría (120 mililitros) <br> 3.- 1/2 taza de leche evaporada <br> 4.- 3/8 de azúcar refinada (75 gramos) <br> 5.- 1 cucharadita de sal <br> 6.- 1/3 de mantequilla derretida
+                                        (75 gramos) <br> 7.- 1 huevo <br> 8.- 500 gramos de harina <br> 1/2 cuchara de canela molida <br></p>
+                                    <h5 class="card-title">Cubierta</h5>
+                                    <p class="card-text">1.- 135 gramos de azúcar refinada <br> 2.- 115 gramos de mantequilla <br> 3.- 125 gramos de harina <br> 4.- 2 cucharaditas de canela molida <br> 5.- 1 cucharadita de esencia de vainilla <br></p>
+                                    <h5 class="card-title">Procedimiento</h5>
+                                    <p class="card-text">1.- Disuelve la levadura en el agua dentro de un tazón grande. Agrega la leche evaporada, 3/8 de taza de azúcar, 1/3 de taza de mantequilla, sal, huevo y 2 tazas de harina. Incorpora poco a poco las 2 tazas de harina
+                                        restante y 1/2 cucharadita de canela. Coloca sobre una superficie enharinada y amasa solo hasta que se forme una masa. <br> 2.- Amasa de 6 a 8 minutos hasta que que la masa quede tersa y elástica. Tapa con una toalla
+                                        y deja reposar en un lugar tibio para que duplique su tamaño, aproximadamente 1 hora. <br> 3.- Mientras, prepara la cubierta de las conchas. Bate en un tazón 2/3 taza de azúcar con 1/2 taza de mantequilla, hasta
+                                        acremar. Incorpora la harina y sigue batiendo hasta formar una pasta gruesa. Divide la pasta en 2 porciones y coloca cada una en un tazón por separado. Mezcla la canela con una porción y la vainilla con la otra.
+                                        <br> 4.- Cuando la masa haya duplicado su tamañp, córtala en 12 piezas del mismo tamaño, haciendo forma de bolitas. <br> 5.- Ahora toma la pasta sabor canela y divídela en 6 bolitas. Aplana cada bolita con tus manos
+                                        y coloca sobre una bolita de masa, presionando suavemente para aplanar un poco la masa. Repite el procedimiento con la pasta sabor vainilla y el resto de las bolitas de masa.con un molde marca líneas similares a
+                                        las de las conchas marinas. Deja que dupliquen su volumen durante aproximadamente 45 minutos. <br> 6.- Precalienta el horno a 190 °C. Hornea durante 20 minutos o hasta que tomen un tono ligeramente dorado.
+                                        <br> 7.- Esperamos a que se enfríe y procedemos a ponerlo en charolas para su venta.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------------------cuernos----------------------->
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    <img src="../../../assets/./img/cuernos.jpeg" alt="img" style="width: 200px; height: 200px">
+                  </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ingredientes</h5>
+                                    <p class="card-text">1.- 1 kilo y medio de harina <br> 2.- 125 gramos de azucar <br> 3.- 25 gramos de sal <br> 4.- Mantequilla<br> 5.- Medio litro de agua <br> 6.- 1/4 de levadura <br> 7.- 1 frasco de Nutella <br>
+                                        <h5 class="card-title">Procedimiento</h5>
+                                        <p class="card-text">1.- Hacer una presa con la harina, despues en ella ponemos la levadura, la sal, el azúcar, la mantequilla y el agua y los disolvemos bien <br> 2.- Amasa de 6 a 8 minutos hasta que que la masa quede tersa y elástica.
+                                            Dejar que duplique su tamaño unos 20 minutos <br> 3.- Cuando la masa haya duplicado su volumen, córtala en 20 piezas del mismo tamaño. y empezaremos a hacer los cuernos <br> 4.- Extendemos la masa con un rodillo,
+                                            le ponemos nutella en la parte inferior y la cubrimos con masa, despues lo que haremos es juntar la masa y hacer la forma del cuerno <br> 6.- Precalienta el horno a 190 °C. Hornea durante 15 minutos o hasta
+                                            que tomen un tono ligeramente dorado. <br>
+                                </div>
+                            </div>
+
+                            <!-------------------coco----------------------->
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <img src="../../../assets/./img/coco.jpeg" alt="img" style="width: 200px;height: 200px">
+                    </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ingredientes</h5>
+                                        <p class="card-text">1.- 3 kilos de harina de trigo <br> 2.- 500 gramos de azucar morena <br> 3.- 100 gramos de levadura <br> 4.- 400 gramos de Mantequilla<br> 5.- 1/2 litro de leche <br> 6.- 5 huevos <br> 7.- 4 tapaderas de vainilla
+                                            <br>
+                                            <h5 class="card-title">Procedimiento</h5>
+                                            <p class="card-text">1.- Hacer una presa con la harina, despues en ella ponemos la levadura, el azúcar, la mantequilla y la leche y los disolvemos bien <br> 2.- Amasa de 10 minutos hasta que que la masa quede tersa y elástica. Dejar
+                                                que duplique su tamaño unos 5 minutos <br> 3.- Cuando la masa haya duplicado su volumen, córtala en 20 piezas del mismo tamaño con un molde especial para darle la forma y empezaremos a hacer los panes de
+                                                coco <br> 4.- Extendemos la masa con un rodillo, y ya que esté extendida procederemos a tomar el molde y lo ecagaremos en la masa para obtener alrrededor de 30 panes <br> 6.- Precalienta el horno a 190 °C.
+                                                Hornea durante 30 minutos o hasta que tomen un tono ligeramente dorado. <br> 7.- Una vez que ya está frio procedemos a ponerle el azúcar glass y el coco en la parte superior del pan.
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <!---------------------vaca--------------->
+
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <img src="../../../assets/./img/pan6.jpg" alt="img" style="height: 200px; width: 200px">
+                    </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ingredientes</h5>
+                                        <p class="card-text">1.- 3 kilos de harina de trigo <br> 2.- 500 gramos de azucar morena <br> 3.- 100 gramos de levadura <br> 4.- 400 gramos de Mantequilla<br> 5.- 1/2 litro de leche <br> 6.- 5 huevos <br> 7.- 4 tapaderas de vainilla
+                                            <br> 8.- azucar glass <br> 9.- chocolate derretido <br>
+                                            <h5 class="card-title">Procedimiento</h5>
+                                            <p class="card-text">1.- Hacer una presa con la harina, despues en ella ponemos la levadura, el azúcar, la mantequilla y la leche y los disolvemos bien <br> 2.- Amasa de 10 minutos hasta que que la masa quede tersa y elástica. Dejar
+                                                que duplique su tamaño unos 5 minutos <br> 3.- Cuando la masa haya duplicado su volumen, córtala en 20 piezas del mismo tamaño con un molde especial para darle la forma y empezaremos a hacer los panes de
+                                                coco <br> 4.- Extendemos la masa con un rodillo, y ya que esté extendida procederemos a tomar el molde y lo ecagaremos en la masa para obtener alrrededor de 30 panes <br> 6.- Precalienta el horno a 190 °C.
+                                                Hornea durante 30 minutos o hasta que tomen un tono ligeramente dorado. <br> 7.- Una vez qie se enfría procedemos a poner el azúcar glass y el chocolate derretido encima del pan y esperamos a que seque.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </ng-template>
+    </ngb-tab>
+
+    <!--                  -->
+    <ngb-tab title="Elaboración">
+        <ng-template ngbTabContent>
+            <br>
+            <div class="view" style="background-image: url('../../../assets/./img/reynera2.png'); background-repeat: no-repeat; background-size: cover; background-position: center center;position:relative;background-attachment: fixed;">
+                <div class="container justify-content-center" style="font-family: fantasy; color: saddlebrown; text-align: center;font-size: 48px">Elaboración</div>
+
+                <!------------------------Recetario------------------------->
+                <div class="container mt-5">
+                    <div id="accordion">
+
+                        <!-------------------concha------------------------------>
+                        <div></div>
+                        <div class="card">
+                            <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                    <button class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        <img src="../../../assets/./img/conchas.jpeg" alt="img" style="width: 200px; height: 200px">
+                      </button>
+                                </h5>
+                            </div>
+                            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ingredientes</h5>
+                                    <div class="container">
+                                        <form action="" method="POST">
+                                            <div class="container mt-1 d-flex justify-content-center">
+                                                <!----------------------------botones de edición------->
+                                                <button type="submit" (click)="actualizarInvnetario()" class="btn btn-success col-1" href=""><i
+                                class="fas fa-file-upload"></i>
+                            </button>
+
+                                                <button id="editar" class="btn btn-warning col-1"><i class="fas fa-edit"></i></button>
+                                            </div>
+
+                                            <!------------------------formulario---------------------->
+
+                                            <div class="row">
+                                                <div class="card mr-4">
+                                                    <table class="table table-condensed table-striped">
+
+
+                                                        <tr>
+                                                            <th>id</th>
+                                                            <th>Nombre Producto</th>
+                                                            <th>Inventario</th>
+
+                                                        </tr>
+
+                                                        <tbody>
+                                                            <tr *ngFor="let producto of productos; let i = index">
+
+                                                                <td> {{producto.idProducto }} </td>
+                                                                <td>{{producto.nombre }} </td>
+                                                                <div class="col mt-2 ">
+                                                                    <input type="number" name="{{i + 1}}" class="form-control form-control-sm" [(ngModel)]="producto.cantidad" disabled>
+                                                                </div>
+
+                                                            </tr>
+
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="card ">
+                                                        <table class="table table-condensed table-striped">
+
+
+                                                            <tr>
+                                                                <th scope="col">Cantidad Requerido</th>
+                                                            </tr>
+                                                            <tbody>
+                                                                <div class="col mt-2 ">
+                                                                    <input type="number" name="levadura" class="form-control form-control-sm" [(ngModel)]="resultados.resultado1" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="agua" class="form-control form-control-sm" [(ngModel)]="resultados.resultado2" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="leche_evaporada" class="form-control form-control-sm" [(ngModel)]="resultados.resultado3" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="azucar" class="form-control form-control-sm" [(ngModel)]="resultados.resultado4" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="sal" class="form-control form-control-sm" [(ngModel)]="resultados.resultado5" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="mantequilla" class="form-control form-control-sm" [(ngModel)]="resultados.resultado6" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="harina" class="form-control form-control-sm" [(ngModel)]="resultados.resultado7" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="canela" class="form-control form-control-sm" [(ngModel)]="resultados.resultado8" pattern="[0-9]" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="vainilla" class="form-control form-control-sm" [(ngModel)]="resultados.resultado9" disabled>
+                                                                </div>
+                                                                <div class="col mt-3 mb-2 ">
+                                                                    <input type="number" name="huevo" class="form-control form-control-sm" [(ngModel)]="resultados.resultado10" disabled>
+                                                                </div>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="form-col ml-5">
+
+                                                    <div class="form-group  ">
+                                                        <label>No. de piezas
+                                                        
+                                                        <input type="text" maxlength="2" name="piezas"  [(ngModel)]="piezas"  class="form-control"
+                                                        required autocomplete="off" onkeypress="return (event.charCode >= 48 && event.charCode <= 57)" min="1" max="30000">
+                                                    </label>
+
+                                                    </div>
+                                                    <button color="primary" (click)="calcular()">Calcular</button>
+
+                                                </div>
+
+                                            </div>
+
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-------------------cuernos----------------------->
+
+                        <div class="card">
+                            <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <img src="../../../assets/./img/cuernos.jpeg" alt="img" style="width: 200px; height: 200px">
+                      </button>
+                                </h5>
+                            </div>
+                            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                    <h5 class="card-title">Ingredientes</h5>
+                                    <p class="card-text">1.- 1 kilo y medio de harina <br> 2.- 125 gramos de azucar <br> 3.- 25 gramos de sal <br> 4.- Mantequilla<br> 5.- Medio litro de agua <br> 6.- 1/4 de levadura <br> 7.- 1 frasco de Nutella <br>
+                                        <h5 class="card-title">Procedimiento</h5>
+                                        <p class="card-text">1.- Hacer una presa con la harina, despues en ella ponemos la levadura, la sal, el azúcar, la mantequilla y el agua y los disolvemos bien <br> 2.- Amasa de 6 a 8 minutos hasta que que la masa quede tersa y elástica.
+                                            Dejar que duplique su tamaño unos 20 minutos <br> 3.- Cuando la masa haya duplicado su volumen, córtala en 20 piezas del mismo tamaño. y empezaremos a hacer los cuernos <br> 4.- Extendemos la masa con un rodillo,
+                                            le ponemos nutella en la parte inferior y la cubrimos con masa, despues lo que haremos es juntar la masa y hacer la forma del cuerno <br> 6.- Precalienta el horno a 190 °C. Hornea durante 15 minutos o hasta
+                                            que tomen un tono ligeramente dorado. <br>
+                                </div>
+                            </div>
+
+                            <!-------------------coco----------------------->
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <img src="../../../assets/./img/coco.jpeg" alt="img" style="width: 200px;height: 200px">
+                        </button>
+                                    </h5>
+                                </div>
+
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ingredientes</h5>
+                                        <p class="card-text">1.- 3 kilos de harina de trigo <br> 2.- 500 gramos de azucar morena <br> 3.- 100 gramos de levadura <br> 4.- 400 gramos de Mantequilla<br> 5.- 1/2 litro de leche <br> 6.- 5 huevos <br> 7.- 4 tapaderas de vainilla
+                                            <br>
+                                            <h5 class="card-title">Procedimiento</h5>
+                                            <p class="card-text">1.- Hacer una presa con la harina, despues en ella ponemos la levadura, el azúcar, la mantequilla y la leche y los disolvemos bien <br> 2.- Amasa de 10 minutos hasta que que la masa quede tersa y elástica. Dejar
+                                                que duplique su tamaño unos 5 minutos <br> 3.- Cuando la masa haya duplicado su volumen, córtala en 20 piezas del mismo tamaño con un molde especial para darle la forma y empezaremos a hacer los panes de
+                                                coco
+                                                <br> 4.- Extendemos la masa con un rodillo, y ya que esté extendida procederemos a tomar el molde y lo ecagaremos en la masa para obtener alrrededor de 30 panes <br> 6.- Precalienta el horno a 190 °C. Hornea
+                                                durante 30 minutos o hasta que tomen un tono ligeramente dorado. <br> 7.- Una vez que ya está frio procedemos a ponerle el azúcar glass y el coco en la parte superior del pan.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!---------------------vaca--------------->
+
+                            <div class="card">
+                                <div class="card-header" id="headingThree">
+                                    <h5 class="mb-0">
+                                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <img src="../../../assets/./img/pan6.jpg" alt="img" style="height: 200px; width: 200px">
+                        </button>
+                                    </h5>
+                                </div>
+                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Ingredientes</h5>
+                                        <p class="card-text">1.- 3 kilos de harina de trigo <br> 2.- 500 gramos de azucar morena <br> 3.- 100 gramos de levadura <br> 4.- 400 gramos de Mantequilla<br> 5.- 1/2 litro de leche <br> 6.- 5 huevos <br> 7.- 4 tapaderas de vainilla
+                                            <br> 8.- azucar glass <br> 9.- chocolate derretido <br>
+                                            <h5 class="card-title">Procedimiento</h5>
+                                            <p class="card-text">1.- Hacer una presa con la harina, despues en ella ponemos la levadura, el azúcar, la mantequilla y la leche y los disolvemos bien <br> 2.- Amasa de 10 minutos hasta que que la masa quede tersa y elástica. Dejar
+                                                que duplique su tamaño unos 5 minutos <br> 3.- Cuando la masa haya duplicado su volumen, córtala en 20 piezas del mismo tamaño con un molde especial para darle la forma y empezaremos a hacer los panes de
+                                                coco
+                                                <br> 4.- Extendemos la masa con un rodillo, y ya que esté extendida procederemos a tomar el molde y lo ecagaremos en la masa para obtener alrrededor de 30 panes <br> 6.- Precalienta el horno a 190 °C. Hornea
+                                                durante 30 minutos o hasta que tomen un tono ligeramente dorado. <br> 7.- Una vez qie se enfría procedemos a poner el azúcar glass y el chocolate derretido encima del pan y esperamos a que seque.
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </ng-template>
+    </ngb-tab>
+
+
+
+
+    <!--                  -->
+
+
+
+</ngb-tabset>

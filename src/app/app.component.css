@@ -1,0 +1,11 @@
+.tabla1 {
+    margin-left: 1em !important;
+    align-items: flex-start !important;
+    justify-items: start;
+    width: 50%;
+}
+
+.i {
+    margin-top: -2px;
+    padding: 0px;
+}

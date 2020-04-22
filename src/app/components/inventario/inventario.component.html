@@ -1,0 +1,69 @@
+<form>
+    <div class="text-center">
+        <h1>Inventario</h1>
+    </div>
+    <div class="text-center">
+        <input class="btn btn-outline-success mr-2" type="submit" value="Guardar" (click)="altaProducto()">
+        <input class="btn btn-outline-warning mr-2" type="button" value="Editar" (click)="editarProducto()">
+        <input class="btn btn-outline-danger" value="Borrar" (click)="bajaProducto(producto.idProducto)">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Nombre del producto</label>
+            <input type="text" class="form-control" name="nombre" [(ngModel)]="producto.nombre">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Cantidad</label>
+            <input type="number" class="form-control" name="cantidad" [(ngModel)]="producto.cantidad">
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Tipo de producto</label>
+            <input type="text" class="form-control" name="tipo" [(ngModel)]="producto.tipo">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="inputAddress">Precio</label>
+            <input type="number" class="form-control" name="precio" [(ngModel)]="producto.precio">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">Descripcion</label>
+        <textarea class="form-control" name="descripcion" [(ngModel)]="producto.descripcion" rows="3"></textarea>
+    </div>
+    <label for="example-date-input" class="col-2 col-form-label">Fecha de caducidad</label>
+    <div class="col-10">
+        <input class="form-control" type="date" name="caducidad" [(ngModel)]="producto.caducidad">
+    </div>
+</form>
+<div class="container mt-5 col">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Id</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Tipo</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Descripcion</th>
+
+                <th scope="col">Herramientas</th>
+            </tr>
+        </thead>
+        <tr *ngFor="let producto of productos">
+            <td text-center> {{producto.idProducto | titlecase }} </td>
+            <td text-center> {{producto.nombre | titlecase }} </td>
+            <td text-center> {{producto.tipo }} </td>
+            <td text-center> {{producto.precio | titlecase }} </td>
+            <td text-center> {{producto.cantidad | titlecase }} </td>
+            <td text-center> {{producto.descripcion }} </td>
+
+
+            <td><button class="btn btn-primary mr-2" (click)="seleccionarProducto(producto.idProducto)">Seleccionar</button>
+                <button class="btn btn-danger" (click)="bajaProducto(producto.idProducto)">Borrar</button>
+            </td>
+        </tr>
+
+    </table>
+
+</div>

@@ -1,0 +1,137 @@
+<!----------------------------botones de edición-->
+<div>
+    <!-- <div class="container mt-1 d-flex justify-content-center"> -->
+    <div class="text-center">
+        <h1>Recursos Humanos</h1>
+    </div>
+    <div class="text-center">
+        <button class="btn btn-outline-success mr-2" (click)="altaEmpleado()">Guardar</button>
+        <button class="btn btn-outline-warning mr-2" (click)="editarEmpleado()">Editar</button>
+        <button class="btn btn-outline-danger" (click)="bajaEmpleado(empleado.idEmpleado)">Borrar</button>
+    </div>
+    <!-- </div> -->
+
+    <!--formulario-->
+
+
+    <div class="container d-flex justify-content-center mt-5">
+        <form>
+            <div class="form-row align-items-center">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput">Nombre(s)<input type="text" class="form-control" name="nombre" [(ngModel)]="empleado.nombre"
+              placeholder=""></label>
+                </div>
+
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput2">Apellido paterno<input type="text" name="apellidoP" [(ngModel)]="empleado.apellidoP" class="form-control"
+              id="formGroupExampleInput2" placeholder=""></label>
+                </div>
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput">Apellido materno <input type="text" name="apellidoM" [(ngModel)]="empleado.apellidoM" class="form-control"
+              id="formGroupExampleInput" placeholder=""></label>
+                </div>
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput">Edad <input type="number" class="form-control" name="edad" [(ngModel)]="empleado.edad"
+              placeholder=""></label>
+                </div>
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput2">RFC<input type="text" class="form-control" name="rfc" [(ngModel)]="empleado.rfc"
+              placeholder=""></label>
+                </div>
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput2">Domicilio<input type="text" name="domicilio" [(ngModel)]="empleado.domicilio" class="form-control"
+              id="formGroupExampleInput2" placeholder=""></label>
+                </div>
+
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput2">Colonia<input type="text" class="form-control" name="colonia" [(ngModel)]="empleado.colonia"
+              placeholder=""></label>
+                </div>
+
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="formGroupExampleInput2">Teléfono<input type="number" min="0" name="telefono" [(ngModel)]="empleado.telefono" class="form-control"
+              id="formGroupExampleInput2" placeholder=""></label>
+                </div>
+            </div>
+        </form>
+
+    </div>
+    <div class="container">
+        <div class="form-row align-items-center"></div>
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="formGroupExampleInput2">Turno <select name="turno" [(ngModel)]="empleado.turno" class="form-control">
+          <option value="Matutino">Matutino</option>
+          <option value="Vespertino">Vespertino</option>
+        </select></label>
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="formGroupExampleInput2">Rol <select name="rol" [(ngModel)]="empleado.rol" class="form-control">
+          <option value="Produccion">Producción</option>
+          <option value="Venta">Venta</option>
+        </select></label>
+        </div>
+
+        <div class="form-group mx-sm-3 mb-2">
+            <label for="formGroupExampleInput2">Genero <select name="sexo" [(ngModel)]="empleado.sexo" class="form-control">
+          <option value="Mujer">Mujer</option>
+          <option value="Hombre">Hombre</option>
+        </select></label>
+        </div>
+    </div>
+
+
+
+
+
+    <!---tabla--->
+    <div class="container mt-5 col">
+        <table class="table table-hover" id="tabla-rh">
+            <thead class="thead-dark">
+                <tr class="">
+                    <th scope="col">ID</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido paterno</th>
+                    <th scope="col">Apellido materno</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">RFC</th>
+                    <th scope="col">Domicilio</th>
+                    <th scope="col">Colonia</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Turno</th>
+                    <th scope="col">Rol</th>
+                    <th scope="col">Género</th>
+                    <th scope="col">Herramientas</th>
+                </tr>
+            </thead>
+            <tr *ngFor="let empleado of empleados">
+                <td text-center> {{empleado.idEmpleado | titlecase }} </td>
+                <td text-center> {{empleado.nombre | titlecase }} </td>
+                <td text-center> {{empleado.apellidoP | titlecase }} </td>
+                <td text-center> {{empleado.apellidoM | titlecase }} </td>
+                <td text-center> {{empleado.edad | titlecase }} </td>
+                <td text-center> {{empleado.rfc | titlecase }} </td>
+                <td text-center> {{empleado.domicilio | titlecase }} </td>
+                <td text-center> {{empleado.colonia | titlecase }} </td>
+                <td text-center> {{empleado.telefono | titlecase }} </td>
+                <td text-center> {{empleado.turno }} </td>
+                <td text-center> {{empleado.rol }} </td>
+                <td text-center> {{empleado.sexo | titlecase}} </td>
+                <td><button class="btn btn-primary mr-2" (click)="seleccionarEmpleado(empleado.idEmpleado)">Seleccionar</button>
+                    <button class="btn btn-danger" (click)="bajaEmpleado(empleado.idEmpleado)">Borrar</button>
+                </td>
+
+
+
+
+            </tr>
+        </table>
+    </div>
+
+</div>
